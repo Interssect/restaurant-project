@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="css/styles.css" rel="stylesheet">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<link rel="stylesheet">
+	<title>Restaurant Reviews</title>
+</head>
+<body>
+	<header>
+		<nav>
+			<h1><a href="/">Restaurant Reviews</a></h1>
+		</nav>
+	</header>
+	<main id="maincontent">
+		<section id="map-container">
+			<div id="map" role="application" tabindex="0"></div>
+		</section>
+		<section>
+			<div class="filter-options">
+				<h2>Filter Results</h2><select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()" tabindex="0">
+					<option value="all">
+						All Neighborhoods
+					</option>
+				</select> <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()" tabindex="0">
+					<option value="all">
+						All Cuisines
+					</option>
+				</select>
+			</div>
+			<ul class="three-grid-columns columns" id="restaurants-list"></ul>
+		</section>
+	</main>
+	<script charset="utf-8" src="js/dbhelper.js" type="application/javascript">
+	</script> 
+	<script charset="utf-8" src="js/main.js" type="application/javascript">
+	</script> 
+	<script charset="utf-8" src="sw.js" type="application/javascript">
+	</script> 
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDD1twsFgHP_M4HBz5XdNqUyuUcCmqQlX0&libraries=places&callback=initMap">
+	</script>
+	<footer id="footer">
+		Copyright (c) 2018 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+	</footer>
+</body>
+</html>
